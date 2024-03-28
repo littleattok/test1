@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+    font-family: "Noto Sans KR", sans-serif;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter" sans-serif;
+    background: linear-gradient(90deg, #7794be, #f6f6f6);
+    padding: 40px;
+    background-repeat: no-repeat;
+}
+.right{
+    padding-left: 50px;
+}
+
+.container {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.login-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 150px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: white;
+    padding: 50px !important;
+}
+
+.login-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #eee;
+    position: relative;
+    width: 700px;
+}
+
+.login-image {
+    position: absolute;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.login-header,
+.signup-header {
+    margin-bottom: 50px;
+}
+
+.welcome-message {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.login-form,
+.signup-form {
+    width: 450px;
+    width: 100%;
+}
+
+.login-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.login-form-footer {
+    display: flex;
+    gap: 30px;
+    margin-top: 70px;
+    flex-direction: column;
+}
+
+.login-form-footer > a {
+    flex: 6;
+    border: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    background: #8b8b81;
+    transition:0.2s
+}
+
+.login-form-footer > a:hover {
+    background-color: #4e4e4e;
+    color:#fff;
+}
+
+.form-item label:not(.checkboxLabel) {
+    display: inline-block;
+    background-color: white;
+    margin-bottom: 10px;
+    position: absolute;
+    padding: 0 5px;
+    transform: translate(10px, -10px);
+    font-size: 14px;
+}
+.login-right .form-item label:not(.checkboxLabel) {
+    display: inline-block;
+    background: #eee;
+    margin-bottom: 10px;
+    position: absolute;
+    padding: 0 5px;
+    transform: translate(10px, -10px);
+    font-size: 14px;
+}
+
+
+
+.etc{
+    text-align: center;
+}
+.etc .signUp,
+.etc .findPW{
+    display: inline-block;
+    position:relative;
+    font-size: 18px;
+    margin: auto;
+    text-decoration: none;
+    transform: 0.2s;
+}
+.etc a:visited,
+.etc a:link{
+    color:black;
+    text-decoration: none;
+}
+.etc a:hover{
+    color:#7794be;
+}
+
+
+
+input[type='text'],
+input[type='password']  {
+    border: 1px solid rgb(56, 174, 253);
+    height: 55px;
+    width:350px;
+    padding: 0 0.5rem;
+    
+    outline: none;
+    font-size: 18px;
+    border-radius: 6px;
+        padding-left:50px;
+
+}
+
+
+input[type='text'].quickcode {
+    border: 1px solid rgb(56, 174, 253);
+    height: 55px;
+    width:600px;
+    padding:  0.5rem;
+    background: #eee;
+    
+    outline: none;
+    font-size: 18px;
+    border-radius: 6px;
+    padding-left:50px;
+
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    accent-color: #5a56d3;
+}
+
+button {
+    border: none;
+    background:  #83c2ec;
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 55px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 6px;
+}
+button:hover{
+    color:#fff;
+    background-color: #4e4e4e;
+}
+
+
+
+
+.login-right button {
+    border: none;
+    background:  #909ca3;
+    color: black;
+    padding: 1rem ;
+    width:600px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 55px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 6px;
+}
+ .login-right button:hover{
+    color:#fff;
+    background-color: #4e4e4e;
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        grid-template-columns: auto;
+    }
+
+    .login-left {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .login-right {
+        display: none;
+    }
+}
+
+
+/*오버레이 부분*/
+
+.overlay {
+    display: table;
+    vertical-align: middle;
+    flex-direction: column;
+    justify-content: center;
+    padding-left:50px;
+    padding-top: 70px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #7794be;
+    position: absolute;
+    z-index: 1;
+    transition: 0.3s;
+    width:700px;
+    height: 100%;
+}
+
+.overlay .form-item label:not(.checkboxLabel) {
+    display: inline-block;
+    background: #eee;
+    margin-bottom: 10px;
+    position: absolute;
+    padding: 0 5px;
+    transform: translate(10px, -10px);
+    font-size: 14px;
+}
+
+.overlay input[type='text'] ,
+.overlay input[type='password'],
+.overlay input[type='email']  {
+    border: 1px solid rgb(56, 174, 253);
+    height: 55px;
+    width:500px;
+    padding: 0 0.5rem;
+    background: #eee;
+    
+    outline: none;
+    font-size: 18px;
+    border-radius: 6px;
+    
+}
+.signup-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.overlay button {
+    border: none;
+    background:  #9bdaff;
+    color: black;
+    padding: 1rem ;
+    width:500px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 55px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 6px;
+}
+ .login-right button:hover{
+    color:#fff;
+    background-color: #4e4e4e;
+}
+
+
+.signup-header{
+    display: flex;
+    justify-content: space-between;
+}
+.signup-header .icon{
+    font-size: 40px;
+    padding-right: 50px;
+    transition: 0.2s;
+}
+.overlay a:visited,
+.overlay a:link{
+    color:white;
+    text-decoration: none;
+}
+.overlay a:hover{
+    transition: 0.2s;
+transform: scale(1.2);
+}
+
+
+.overlay-active  {
+    transform: translateX(150%);
+}

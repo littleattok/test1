@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 화면 테스트</title>
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+
+    <div class="container">
+
+
+        <!--왼쪽 구역-->
+        <div class="login-left">
+            <div class="login-header">
+                <h1 class="welcom-message">돌아오신 걸 환영합니다!</h1>
+            </div>
+            <form class="login-form">
+                <div class="login-form-content">
+                    <div class="form-item">
+                        <label for="email">Email</label>
+                        <input type="text" id="email">
+                    </div>
+                    <div class="form-item">
+                        <label for="password">Password</label>
+                        <input type="password" id="password">
+                    </div>
+                    <button type="submit">로그인</button>
+                </div>
+                <div class="etc">
+                    <a href="#" class="signUp">회원가입</a>
+                    <span>/</span>
+                    <a href="#" id= "overlayOpen" class="findPW">비밀번호 찾기</a>
+
+                </div>
+                <div class="login-form-footer">
+                    <a href="#">
+                        Google로 로그인
+                    </a>
+                </div>
+            </form>
+        </div>
+
+
+
+        <!--오른쪽 구역-->
+        <div class="login-right">
+            <div class="right">
+                <div class="login-header">            
+                    <h1 class="welcome-message">또는 방금 공유한 자료가 있으신가요?</h1>
+                </div>
+                <form class="login-form">
+                    <div class="login-form-content">
+                        <div class="form-item">
+                            <label id="quickcode">코드</label>
+                            <input type="text" class="quickcode">
+                        </div>
+                        <button type="submit">확인하기</button>
+                    </div>
+                </form> 
+            </div>
+
+            <!--오버레이 구역-->
+            <div class="overlay" id="overlay">
+                <div class="signup-header">            
+                    <h1 class="welcome-message">회원 가입하기</h1>
+                    <a href="#" id="overlayOut">
+                        <i class='bx bx-chevron-left icon' ></i>
+                    </a>
+                </div>
+                <form class="signup-form">
+                    <div class="signup-form-content">
+
+                        <div class="form-item">
+                            <label id="newName">이름</label>
+                            <input type="text" class="newName">
+                        </div>
+
+                        <div class="form-item">
+                            <label id="newEmail">Email</label>
+                            <input type="email" class="newEmail">
+                        </div>
+
+                        <div class="form-item">
+                            <label id="newPassword">비밀번호</label>
+                            <input type="password" class="newPassword">
+                        </div>
+                       
+                        <button type="submit" class>가입하기</button>
+                    </div>
+                </form> 
+            </div>
+
+        </div>
+
+        
+
+    </div>
+    <script src="main.js"></script>
+
+</body>
+</html>
